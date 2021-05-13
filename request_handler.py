@@ -59,17 +59,35 @@ def change_plane(registry_numbers, planes, tree, product_table):
         is_exist = registry_numbers.index(registry_number)
     except:
         return 'There is no such plane.'
+
     assign_to_change = input('Enter assign you want to change: ')
     if assign_to_change == 'registryNbr' or assign_to_change == 'lineNbr':
         return 'You are prohibited to change that!'
+    #above is okay
+    
     for plane in planes:
-        if plane['registryNbr'] == registry_number:
+        if plane['registryNbr'] == registry_number: # good
+            plane_queue = registry_numbers.index(plane['registryNbr'])
             change = input('Enter a new value for you attibute: ')
+            i = 0
             for assign in plane:
                 if assign == assign_to_change:
                     print('Changed ', assign_to_change, ' from ', plane[assign_to_change], ' to ', change)
                     plane[assign_to_change] = change
+                    # above we change list, below XML
+                    print(product_table[plane_queue][i].attrib)
+                    product_table[plane_queue][i].set('applicPropertyValues', change)
+                    tree.write('data.xml')
                     return planes
-            print('You entered a new assign:', assign_to_change, ". It's value is", change)
+                i += 1
+            print('You entered a new modification assign:', assign_to_change, ". It's value is", change)
             plane[assign_to_change] = change
+            #now create new assign with ident = change, type = condition(const), and values = change
+            assign = et.Element('assign')
+            assign.set('applicPropertyIdent', assign_to_change)
+            assign.set('applicPropertyType', 'condition')
+            assign.set('applicPropertyValues', change)
+            product_table[plane_queue].append(assign)
+
+            tree.write('data.xml')
             return planes

@@ -1,5 +1,3 @@
-import xml.etree.ElementTree as et
-
 def get_planes(product_table, registry_numbers, planes, file = 'data.xml'):
     for product in product_table:
         plane = {}
