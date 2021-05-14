@@ -1,15 +1,29 @@
 import Plane
 import xml.etree.ElementTree as et
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 21b4063445e8582b59a078a76461ecd3a834d80e
 def handle_request(request, registry_numbers, planes, tree, product_table):
     if request == 'add':
         return add_plane(registry_numbers, planes, tree, product_table)
     elif request == 'change':
         return change_plane(registry_numbers, planes, tree, product_table)
+<<<<<<< HEAD
     else:
         request = input('Do you want to "add" or "change": ')
         return handle_request(request, registry_numbers, planes, tree, product_table)
 
+=======
+    elif request == 'delete':
+        return delete_plane(registry_numbers, planes, tree, product_table)
+    else:
+        request = input('Do you want to "add" or "change or delete": ')
+        return handle_request(request, registry_numbers, planes, tree, product_table)
+
+
+>>>>>>> 21b4063445e8582b59a078a76461ecd3a834d80e
 def add_plane(registry_numbers, planes, tree, product_table):
     # creating a new plane
     plane_model = input('Enter model: ')
@@ -52,6 +66,10 @@ def add_plane(registry_numbers, planes, tree, product_table):
         #finished updating xml
         return planes
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 21b4063445e8582b59a078a76461ecd3a834d80e
 def change_plane(registry_numbers, planes, tree, product_table):
     registry_number = input('Enter the registry number of a plane you want to change: ')
     print(registry_numbers)
@@ -91,3 +109,40 @@ def change_plane(registry_numbers, planes, tree, product_table):
 
             tree.write('data.xml')
             return planes
+<<<<<<< HEAD
+=======
+
+
+def delete_plane(registry_numbers, planes, tree, product_table):
+    registry_number = input('Enter the registry number of a plane you want to delete: ')
+    print(registry_numbers)
+    try:
+        is_exist = registry_numbers.index(registry_number)
+    except:
+        return 'There is no such plane.'
+
+    i = 0
+    for plane in planes:
+        if plane['registryNbr'] == registry_number:
+            del planes[i]
+        i += 1
+    i = 1
+    for plane in planes:
+        plane['lineNbr'] = '0'*(4-len(str(i))) + str(i)
+        i += 1
+
+    return planes
+
+    result = et.Element('result')
+
+    for plane in planes:
+        change = et.Element('change')
+        for j in plane:
+            change.set('applicPropertyIdent', j)
+            change.set('applicPropertyType', 'condition')
+            change.set('applicPropertyValues', plane[j])
+        result.append(change)
+    product_table.append(result)
+    tree.write('data.xml')
+    return planes
+>>>>>>> 21b4063445e8582b59a078a76461ecd3a834d80e
