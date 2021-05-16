@@ -2,13 +2,17 @@ import Plane
 import xml.etree.ElementTree as et
 
 def handle_request(request, registry_numbers, planes, tree, product_table):
+    print(registry_numbers, planes)
     if request == 'add':
         return add_plane(registry_numbers, planes, tree, product_table)
     elif request == 'change':
         return change_plane(registry_numbers, planes, tree, product_table)
+    elif request == 'delete':
+        return delete_plane(registry_numbers, planes, tree, product_table)
     else:
-        request = input('Do you want to "add" or "change": ')
+        request = input('Do you want to "add" or "change" or delete": ')
         return handle_request(request, registry_numbers, planes, tree, product_table)
+
 
 def add_plane(registry_numbers, planes, tree, product_table):
     # creating a new plane
@@ -91,3 +95,36 @@ def change_plane(registry_numbers, planes, tree, product_table):
 
             tree.write('data.xml')
             return planes
+
+
+def delete_plane(registry_numbers, planes, tree, product_table):
+    registry_number = input('Enter the registry number of a plane you want to delete: ')
+    try:
+        is_exist = registry_numbers.index(registry_number)
+    except:
+        return 'There is no such plane.'
+
+    plane_queue = 0
+    # deleting from list and XML
+    for plane in planes:
+        if plane['registryNbr'] == registry_number:
+            del planes[plane_queue]
+            del registry_numbers[registry_numbers.index(registry_number)]
+            product_table.remove(product_table[plane_queue])
+            break
+        plane_queue += 1
+    # now changing the lineNumbers
+    plane_queue = 1
+    for plane in planes:
+        plane['lineNbr'] = '0'*(4-len(str(plane_queue))) + str(plane_queue)
+        i = 0
+        for assign in plane:
+            if assign == 'lineNbr':
+                product_table[plane_queue - 1][i].set('applicPropertyValues', plane['lineNbr'])
+                print(product_table[plane_queue - 1][i])
+            i += 1
+        plane_queue += 1
+    
+
+    tree.write('data.xml')
+    return planes, registry_numbers
