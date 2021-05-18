@@ -2,7 +2,6 @@ import Plane
 import xml.etree.ElementTree as et
 
 def handle_request(request, registry_numbers, planes, tree, product_table):
-    print(registry_numbers, planes)
     if request == 'add':
         return add_plane(registry_numbers, planes, tree, product_table)
     elif request == 'change':
@@ -52,13 +51,14 @@ def add_plane(registry_numbers, planes, tree, product_table):
             assign.set('applicPropertyValues', plane_object[assign_properties[i]])
             product.append(assign)
         product_table.append(product)
+        et.indent(tree, space="\t")
         tree.write('data.xml')
         #finished updating xml
         return planes
 
 def change_plane(registry_numbers, planes, tree, product_table):
-    registry_number = input('Enter the registry number of a plane you want to change: ')
     print(registry_numbers)
+    registry_number = input('Enter the registry number of a plane you want to change: ')
     try:
         is_exist = registry_numbers.index(registry_number)
     except:
@@ -79,7 +79,6 @@ def change_plane(registry_numbers, planes, tree, product_table):
                     print('Changed ', assign_to_change, ' from ', plane[assign_to_change], ' to ', change)
                     plane[assign_to_change] = change
                     # above we change list, below XML
-                    print(product_table[plane_queue][i].attrib)
                     product_table[plane_queue][i].set('applicPropertyValues', change)
                     tree.write('data.xml')
                     return planes
@@ -92,12 +91,13 @@ def change_plane(registry_numbers, planes, tree, product_table):
             assign.set('applicPropertyType', 'condition')
             assign.set('applicPropertyValues', change)
             product_table[plane_queue].append(assign)
-
+            et.indent(tree, space='\t')
             tree.write('data.xml')
             return planes
 
 
 def delete_plane(registry_numbers, planes, tree, product_table):
+    print(registry_numbers)
     registry_number = input('Enter the registry number of a plane you want to delete: ')
     try:
         is_exist = registry_numbers.index(registry_number)
@@ -121,10 +121,9 @@ def delete_plane(registry_numbers, planes, tree, product_table):
         for assign in plane:
             if assign == 'lineNbr':
                 product_table[plane_queue - 1][i].set('applicPropertyValues', plane['lineNbr'])
-                print(product_table[plane_queue - 1][i])
             i += 1
         plane_queue += 1
     
 
     tree.write('data.xml')
-    return planes, registry_numbers
+    return planes
