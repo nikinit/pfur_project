@@ -1,4 +1,4 @@
-def get_planes(product_table, registry_numbers, planes, file = 'data.xml'):
+def get_planes(product_table, registry_numbers, planes, file = './data/data.xml'):
     for product in product_table:
         plane = {}
         for assign in product:

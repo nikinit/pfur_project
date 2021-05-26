@@ -64,16 +64,15 @@
 				<assign applicPropertyIdent="modification" applicPropertyType="condition" applicPropertyValues="Disabled" />
 			</product>
 			<product>
-				<assign applicPropertyIdent="model" applicPropertyType="prodattr" applicPropertyValues="green" />
-				<assign applicPropertyIdent="minorModel" applicPropertyType="prodattr" applicPropertyValues="ndgfh" />
-				<assign applicPropertyIdent="subModel" applicPropertyType="prodattr" applicPropertyValues="Sf" />
-				<assign applicPropertyIdent="registryNbr" applicPropertyType="prodattr" applicPropertyValues="umy" />
+				<assign applicPropertyIdent="model" applicPropertyType="prodattr" applicPropertyValues="UP" />
+				<assign applicPropertyIdent="minorModel" applicPropertyType="prodattr" applicPropertyValues="800" />
+				<assign applicPropertyIdent="subModel" applicPropertyType="prodattr" applicPropertyValues="C" />
+				<assign applicPropertyIdent="registryNbr" applicPropertyType="prodattr" applicPropertyValues="FS121A" />
 				<assign applicPropertyIdent="lineNbr" applicPropertyType="prodattr" applicPropertyValues="0006" />
-				<assign applicPropertyIdent="operator" applicPropertyType="prodattr" applicPropertyValues="gert" />
-				<assign applicPropertyIdent="electricalDifferences" applicPropertyType="prodattr" applicPropertyValues="qweds" />
-				<assign applicPropertyIdent="airCondDifferences" applicPropertyType="prodattr" applicPropertyValues="iojhg," />
-				<assign applicPropertyIdent="modification" applicPropertyType="condition" applicPropertyValues="erdtyhn" />
-				<assign applicPropertyIdent="Autopilot" applicPropertyType="condition" applicPropertyValues="Enabled" />
+				<assign applicPropertyIdent="operator" applicPropertyType="prodattr" applicPropertyValues="InLine" />
+				<assign applicPropertyIdent="electricalDifferences" applicPropertyType="prodattr" applicPropertyValues="4 Batteries" />
+				<assign applicPropertyIdent="airCondDifferences" applicPropertyType="prodattr" applicPropertyValues="2 Fans" />
+				<assign applicPropertyIdent="modification" applicPropertyType="condition" applicPropertyValues="Enabled" />
 			</product>
 		</ns0:productCrossRefTable>
 	</ns0:content>

@@ -1,0 +1,4 @@
+.cards__card-buttons {
+    display: flex;
+    flex-direction: column;
+}

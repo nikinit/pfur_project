@@ -1,0 +1,49 @@
+@import url(./root/root.css);
+@import url(./normalize/normalize.css);
+@import url(./header/header.css);
+@import url(./cards/cards.css);
+@import url(./form/form.css);
+@import url(./footer/footer.css);
+@font-face {
+  font-family: 'oswald';
+  src: url(/src/fonts/Oswald/Oswald-ExtraLight.woff);
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'oswald';
+  src: url(/src/fonts/Oswald/Oswald-Light.woff);
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'oswald';
+  src: url(/src/fonts/Oswald/Oswald-Regular.woff);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'oswald';
+  src: url(/src/fonts/Oswald/Oswald-Medium.woff);
+  font-style: normal;
+  font-weight: medium;
+}
+@font-face {
+  font-family: 'oswald';
+  src: url(/src/fonts/Oswald/Oswald-Bold.woff);
+  font-style: normal;
+  font-weight: 900;
+}
+
+body {
+  margin: 0;
+  font-family: 'oswald';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
