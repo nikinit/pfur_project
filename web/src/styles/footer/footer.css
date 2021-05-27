@@ -1,1 +1,5 @@
 @import url(./footer__subscription.css);
+@import url(./footer__link.css);
+.footer {
+    flex-direction: row;
+}
