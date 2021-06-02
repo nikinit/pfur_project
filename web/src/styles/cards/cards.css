@@ -1,11 +1,12 @@
-@import url(./cards__card.css);
+@import url(./cards__card-main.css);
 @import url(./cards__card-logo.css);
-@import url(./cards__card-name.css);
-@import url(./cards__card-registry-number.css);
+@import url(./cards__card-prop.css);
+@import url(./cards__card-prop_name.css);
 @import url(cards__card-info.css);
 @import url(./cards__card-buttons.css);
 @import url(./cards__button.css);
 @import url(./cards__card-button_change.css);
 @import url(./cards__card-button.css);
+@import url(./cards__card-popup.css);
 .cards {
 }
