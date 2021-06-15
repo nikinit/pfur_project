@@ -1,0 +1,8 @@
+.form__label {
+    font-weight: 200;
+    color: #D6001C;
+    margin-top: 12px;
+}
+.form__label:first-child {
+    margin-top: 0;
+}

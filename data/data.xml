@@ -1,0 +1,79 @@
+<ns0:dmodule xmlns:ns0="http://www.ataebiz.org/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ataebiz.org/XMLSchema ../../../Schemas/DataManagement/ProductCrossRefTable.xsd">
+	<ns0:dmIdent>
+		<ns0:identExtension extensionCode="PCT" extensionProducer="ABBE1" />
+		<ns0:dmCode modelIdentCode="ABBE2300" systemDiffCode="A" systemCode="00" subSubSystemCode="0" subSystemCode="0" assyCode="01" disassyCode="00" disassyCodeVariant="A" infoCode="00P" infoCodeVariant="A" itemLocationCode="A" />
+		<ns0:language countryIsoCode="US" languageIsoCode="en" />
+	</ns0:dmIdent>
+	<ns0:issueInfo issueDate="2017-03-01T00:00:00Z" />
+	<ns0:content>
+		<ns0:productCrossRefTable>
+			<product>
+				<assign applicPropertyIdent="model" applicPropertyType="prodattr" applicPropertyValues="SJ" />
+				<assign applicPropertyIdent="minorModel" applicPropertyType="prodattr" applicPropertyValues="100" />
+				<assign applicPropertyIdent="subModel" applicPropertyType="prodattr" applicPropertyValues="Q" />
+				<assign applicPropertyIdent="registryNbr" applicPropertyType="prodattr" applicPropertyValues="FA124A" />
+				<assign applicPropertyIdent="lineNbr" applicPropertyType="prodattr" applicPropertyValues="0001" />
+				<assign applicPropertyIdent="operator" applicPropertyType="prodattr" applicPropertyValues="Azimuth" />
+				<assign applicPropertyIdent="electricalDifferences" applicPropertyType="prodattr" applicPropertyValues="2 Batteries" />
+				<assign applicPropertyIdent="airCondDifferences" applicPropertyType="prodattr" applicPropertyValues="1 Fan" />
+				<assign applicPropertyIdent="modification" applicPropertyType="condition" applicPropertyValues="Disabled" />
+			</product>
+			<product>
+				<assign applicPropertyIdent="model" applicPropertyType="prodattr" applicPropertyValues="SJ" />
+				<assign applicPropertyIdent="minorModel" applicPropertyType="prodattr" applicPropertyValues="100" />
+				<assign applicPropertyIdent="subModel" applicPropertyType="prodattr" applicPropertyValues="Q" />
+				<assign applicPropertyIdent="registryNbr" applicPropertyType="prodattr" applicPropertyValues="FA124C" />
+				<assign applicPropertyIdent="lineNbr" applicPropertyType="prodattr" applicPropertyValues="0002" />
+				<assign applicPropertyIdent="operator" applicPropertyType="prodattr" applicPropertyValues="Azimuth" />
+				<assign applicPropertyIdent="electricalDifferences" applicPropertyType="prodattr" applicPropertyValues="2 Batteries" />
+				<assign applicPropertyIdent="airCondDifferences" applicPropertyType="prodattr" applicPropertyValues="1 Fan" />
+				<assign applicPropertyIdent="modification" applicPropertyType="condition" applicPropertyValues="Disabled" />
+			</product>
+			<product>
+				<assign applicPropertyIdent="model" applicPropertyType="prodattr" applicPropertyValues="SJ" />
+				<assign applicPropertyIdent="minorModel" applicPropertyType="prodattr" applicPropertyValues="100" />
+				<assign applicPropertyIdent="subModel" applicPropertyType="prodattr" applicPropertyValues="Q" />
+				<assign applicPropertyIdent="registryNbr" applicPropertyType="prodattr" applicPropertyValues="FA124G" />
+				<assign applicPropertyIdent="lineNbr" applicPropertyType="prodattr" applicPropertyValues="0003" />
+				<assign applicPropertyIdent="operator" applicPropertyType="prodattr" applicPropertyValues="Azimuth" />
+				<assign applicPropertyIdent="electricalDifferences" applicPropertyType="prodattr" applicPropertyValues="2 Batteries" />
+				<assign applicPropertyIdent="airCondDifferences" applicPropertyType="prodattr" applicPropertyValues="1 Fan" />
+				<assign applicPropertyIdent="modification" applicPropertyType="condition" applicPropertyValues="Disabled" />
+				<assign applicPropertyIdent="Turbo-mode" applicPropertyType="condition" applicPropertyValues="Enabled" />
+			</product>
+			<product>
+				<assign applicPropertyIdent="model" applicPropertyType="prodattr" applicPropertyValues="SJ" />
+				<assign applicPropertyIdent="minorModel" applicPropertyType="prodattr" applicPropertyValues="100" />
+				<assign applicPropertyIdent="subModel" applicPropertyType="prodattr" applicPropertyValues="Q" />
+				<assign applicPropertyIdent="registryNbr" applicPropertyType="prodattr" applicPropertyValues="FA124U" />
+				<assign applicPropertyIdent="lineNbr" applicPropertyType="prodattr" applicPropertyValues="0004" />
+				<assign applicPropertyIdent="operator" applicPropertyType="prodattr" applicPropertyValues="Azimuth" />
+				<assign applicPropertyIdent="electricalDifferences" applicPropertyType="prodattr" applicPropertyValues="2 Batteries" />
+				<assign applicPropertyIdent="airCondDifferences" applicPropertyType="prodattr" applicPropertyValues="1 Fan" />
+				<assign applicPropertyIdent="modification" applicPropertyType="condition" applicPropertyValues="Disabled" />
+			</product>
+			<product>
+				<assign applicPropertyIdent="model" applicPropertyType="prodattr" applicPropertyValues="Boeing" />
+				<assign applicPropertyIdent="minorModel" applicPropertyType="prodattr" applicPropertyValues="100" />
+				<assign applicPropertyIdent="subModel" applicPropertyType="prodattr" applicPropertyValues="Q" />
+				<assign applicPropertyIdent="registryNbr" applicPropertyType="prodattr" applicPropertyValues="FA124O" />
+				<assign applicPropertyIdent="lineNbr" applicPropertyType="prodattr" applicPropertyValues="0005" />
+				<assign applicPropertyIdent="operator" applicPropertyType="prodattr" applicPropertyValues="Azimuth" />
+				<assign applicPropertyIdent="electricalDifferences" applicPropertyType="prodattr" applicPropertyValues="2 Batteries" />
+				<assign applicPropertyIdent="airCondDifferences" applicPropertyType="prodattr" applicPropertyValues="1 Fan" />
+				<assign applicPropertyIdent="modification" applicPropertyType="condition" applicPropertyValues="Disabled" />
+			</product>
+			<product>
+				<assign applicPropertyIdent="model" applicPropertyType="prodattr" applicPropertyValues="UP" />
+				<assign applicPropertyIdent="minorModel" applicPropertyType="prodattr" applicPropertyValues="800" />
+				<assign applicPropertyIdent="subModel" applicPropertyType="prodattr" applicPropertyValues="C" />
+				<assign applicPropertyIdent="registryNbr" applicPropertyType="prodattr" applicPropertyValues="FS121A" />
+				<assign applicPropertyIdent="lineNbr" applicPropertyType="prodattr" applicPropertyValues="0006" />
+				<assign applicPropertyIdent="operator" applicPropertyType="prodattr" applicPropertyValues="InLine" />
+				<assign applicPropertyIdent="electricalDifferences" applicPropertyType="prodattr" applicPropertyValues="4 Batteries" />
+				<assign applicPropertyIdent="airCondDifferences" applicPropertyType="prodattr" applicPropertyValues="2 Fans" />
+				<assign applicPropertyIdent="modification" applicPropertyType="condition" applicPropertyValues="Enabled" />
+			</product>
+		</ns0:productCrossRefTable>
+	</ns0:content>
+</ns0:dmodule>

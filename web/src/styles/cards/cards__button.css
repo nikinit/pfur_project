@@ -1,0 +1,15 @@
+.cards__button {
+    height: 45px;
+    width: 140px;
+    border: 1px solid #D6001C;
+    background-color: #FFF;
+    color: #D6001C;
+    margin-top: 20px;
+    align-self: center;
+}
+.cards__button:hover {
+    cursor: pointer;
+    color: #FFF;
+    border-color: #FFF;
+    background-color: #D6001C;
+}

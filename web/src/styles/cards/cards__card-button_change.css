@@ -1,0 +1,10 @@
+.cards__card-button_change {
+    background-color: #FF6161;
+    border: none;
+    color: #FFF;
+}
+
+.cards__card-button_change:hover {
+    color: #FF6161;
+    background-color: #FFF;
+}

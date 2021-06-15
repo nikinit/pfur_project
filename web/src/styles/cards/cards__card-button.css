@@ -1,0 +1,7 @@
+.cards__card-button {
+    margin: 0 auto 18px auto;
+    min-width: 140px;
+}
+.cards__card-button:last-child {
+    margin: 0;
+}
