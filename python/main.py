@@ -1,8 +1,9 @@
-import get_attributes, request_handler
+import get_attributes
+import request_handler
 import xml.etree.ElementTree as et
 registry_numbers = []
 planes = []
-tree = et.parse('./data/data.xml')
+tree = et.parse('../web/src/data/data.xml')
 root = tree.getroot()
 product_table = root[2][0]
 planes = get_attributes.get_planes(product_table, registry_numbers, planes)
