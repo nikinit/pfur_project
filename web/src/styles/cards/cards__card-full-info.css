@@ -1,4 +1,5 @@
-.cards__card-popup {
+.cards__card-full-info {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }

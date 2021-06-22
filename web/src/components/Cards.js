@@ -39,12 +39,9 @@ export default class Cards extends React.Component {
                     planesData[i] = newCharacteristics;
                     loadedPlanes++;
                 }
-                // ???
                 this.setState({
                     data: planesData,
                 })
-                // console.log(this.state.data)
-                // ???
             },
             (error) => {
                 this.setState({

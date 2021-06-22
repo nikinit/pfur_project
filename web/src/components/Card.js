@@ -1,4 +1,5 @@
 import React from "react";
+import CardInfo from "./CardInfo";
 export default class Card extends React.Component {
     constructor(props) {
         super(props);
@@ -6,7 +7,7 @@ export default class Card extends React.Component {
         this.editButton = this.editButton.bind(this);
         this.state = {
             error: null,
-            infoIsOpen: false,
+            infoIsOpen: true,
             characteristics: {},
             logo: "https://4.bp.blogspot.com/-VCZ54hux6aA/VzxAQaAesPI/AAAAAAAAEAY/d9pFAjKYEIsR3_oWJfYR2pwRU9Pd6dW5gCLcB/s1600/68652_722142921137870_729498003_n.png"
             // TODO: fix logo problem so it goes with characteristics
@@ -23,13 +24,11 @@ export default class Card extends React.Component {
         console.log(event)
     }
     componentDidUpdate(prevProps, prevState) {
-        // console.log(prevProps,prevState)
-        console.log(this.state.characteristics)
-        if (this.props.characteristics !== undefined && prevProps.characteristics === undefined) {
+        if (this.props.characteristics !== undefined && 
+            prevProps.characteristics === undefined) {
             this.setState({
                 characteristics: this.props.characteristics
         });
-        // debugger;
         }
     }
     render() {
@@ -49,20 +48,7 @@ export default class Card extends React.Component {
                         <button className="cards__button cards__card-button cards__card-button_change" onClick={this.editButton}>Изменить</button>
                     </div>
                 </div>
-                <div className="cards__card-popup" style={{
-                display: !infoIsOpen ? "none" : "flex",
-                visibility: !infoIsOpen ? "hidden" : "visible"
-                }}>
-                    <h4 className="cards__card-prop">Model : {characteristics.model}</h4>
-                    <h4 className="cards__card-prop">minorModel : {characteristics.minorModel}</h4>
-                    <h4 className="cards__card-prop">subModel : {characteristics.subModel}</h4>
-                    <h4 className="cards__card-prop">registryNbr : {characteristics.registryNbr}</h4>
-                    <h4 className="cards__card-prop">lineNbr : {characteristics.lineNbr}</h4>
-                    <h4 className="cards__card-prop">operator : {characteristics.operator}</h4>
-                    <h4 className="cards__card-prop">electricalDifferences : {characteristics.electricalDifferences}</h4>
-                    <h4 className="cards__card-prop">airCondDifferences : {characteristics.airCondDifferences}</h4>
-                    <h4 className="cards__card-prop">modification : {characteristics.modification}</h4>
-                </div>
+                <CardInfo characteristics = {characteristics} infoIsOpen = {infoIsOpen}/>
             </div>
         )
     }
