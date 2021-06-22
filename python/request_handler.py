@@ -9,7 +9,7 @@ def handle_request(request, registry_numbers, planes, tree, product_table):
     elif request == 'delete':
         return delete_plane(registry_numbers, planes, tree, product_table)
     else:
-        request = input('Do you want to "add" or "change" or delete": ')
+        request = input('Do you want to "add" or "change" or "delete": ')
         return handle_request(request, registry_numbers, planes, tree, product_table)
 
 
@@ -52,7 +52,7 @@ def add_plane(registry_numbers, planes, tree, product_table):
             product.append(assign)
         product_table.append(product)
         et.indent(tree, space="\t")
-        tree.write('./data/data.xml')
+        tree.write('../web/src/data/data.xml')
         #finished updating xml
         return planes
 
@@ -80,7 +80,7 @@ def change_plane(registry_numbers, planes, tree, product_table):
                     plane[assign_to_change] = change
                     # above we change list, below XML
                     product_table[plane_queue][i].set('applicPropertyValues', change)
-                    tree.write('./data/data.xml')
+                    tree.write('../web/src/data/data.xml')
                     return planes
                 i += 1
             print('You entered a new modification assign:', assign_to_change, ". It's value is", change)
@@ -92,7 +92,7 @@ def change_plane(registry_numbers, planes, tree, product_table):
             assign.set('applicPropertyValues', change)
             product_table[plane_queue].append(assign)
             et.indent(tree, space='\t')
-            tree.write('./data/data.xml')
+            tree.write('../web/src/data/data.xml')
             return planes
 
 
@@ -125,5 +125,5 @@ def delete_plane(registry_numbers, planes, tree, product_table):
         plane_queue += 1
     
 
-    tree.write('./data/data.xml')
+    tree.write('../web/src/data/data.xml')
     return planes
