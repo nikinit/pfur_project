@@ -7,7 +7,7 @@ export default class Card extends React.Component {
         this.editButton = this.editButton.bind(this);
         this.state = {
             error: null,
-            infoIsOpen: true,
+            infoIsOpen: false,
             characteristics: {},
             logo: "https://4.bp.blogspot.com/-VCZ54hux6aA/VzxAQaAesPI/AAAAAAAAEAY/d9pFAjKYEIsR3_oWJfYR2pwRU9Pd6dW5gCLcB/s1600/68652_722142921137870_729498003_n.png"
             // TODO: fix logo problem so it goes with characteristics
