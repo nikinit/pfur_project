@@ -11,7 +11,7 @@ export default class CardInfo extends React.Component {
             )
         }
         
-        
+        // debugger;
         // console.log(characteristicsHtml)
         return (
             <div className="cards__card-full-info" style={{
