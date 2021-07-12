@@ -13,3 +13,9 @@
     border-color: #FFF;
     background-color: #D6001C;
 }
+.cards__button[disabled]:hover {
+    cursor: default;
+    color: #D6001C;
+    background-color: #FFF;
+    border: 1px solid #D6001C;
+}

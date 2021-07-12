@@ -1,22 +1,17 @@
 import React from "react";
 export default class CardInfo extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            characteristics: {}
-        }
-    }
     
     render() {
         const {characteristics, infoIsOpen} = this.props;
         let characteristicsHtml = [];
-        for(let i = 0; i < Object.keys(characteristics).length; i++) {
+        let keys = Object.keys(characteristics)
+        for(let i = 0; i < keys.length; i++) {
             characteristicsHtml.push(
-                <h4 className="cards__card-prop">{Object.keys(characteristics)[i]} : {characteristics[Object.keys(characteristics)[i]]}</h4>
+                <h4 className="cards__card-prop" key={keys[i]}>{keys[i]} : {characteristics[keys[i]]}</h4>
             )
         }
         
-        
+        // debugger;
         // console.log(characteristicsHtml)
         return (
             <div className="cards__card-full-info" style={{
